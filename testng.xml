@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="url" value="www.hotmail.com" />
+  <test thread-count="5" name="Test">
+	  <packages>
+		  <package name="calyx" />
+	  </packages>
+    <classes>
+      <class name="calyx.gen2userprovisining">
+		  <methods>
+			  <exclude name="usercreationmitechsuppor"/>
+		  </methods>
+		</class>  
+      <class name="calyx.gen1usercreation"/>
+      <class name="calyx.gen1userprovisioning"/>
+      <class name="mg28012024.day3"/>
+      <class name="mg28012024.day4"/>
+      <class name="mg28012024.day1"/>
+      <class name="mg28012024.day2"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+<test name="testname" >
+<groups>
+	<run>
+		<include name="smoke" />
+	</run>
+</groups>
+</test>
+<!-- 
+<methods>
+	<exclude name="excludescriptmehtodname"/>
+	<include name="includetestcase"/>
+	<exclude name="Api.*" />
+	maintain uniform name which starts with somefunctionality or group so that regular expression can be used to include/exclude scripts in execution
+	we can execute the script at package level as well using below lines after test level
+	  <packages>
+		  <package name="calyx" />
+	  </packages>
+</methods>
+
+for a test set @AfterTest and @BeforeTest are executed  at end and beginning of the test folder respectively
+
+BeforeSuite is used for global variable like when environment variables changes for QA/dev/CT we can use this method
+AfterSuite is executed at the end of the suite and its scope is entire xml file
+Beforemethod is executed at each test case/method mentioned in class and scope is specific to class file
+Aftermethod	
+tests are executed in class in alphabetical order of their names
+
+execute the scripts which has specific tag in annotation for example
+@Test(group="SMOKE") is used at test method
+in xml group is used at test level (test folder level)
+<test name="testname" >
+<groups>
+	<run>
+		<include name="smoke" />
+		<exclude name="notsmoke" />
+	</run>
+</groups>
+</test>
+helper attributes:
+@Test(dependsonmethods={"depenmethod1","dependmethod2"})
+public void methodname()
+{
+}
+before executing methodname(), it will execute depenmethod1() and depenmethod2()
+helper attribute: (enabled=false)
+@Test(enabled=false) 
+if any test case having known bug/issue and dont want to put in execution , simply use this helper annotation
+helper attribute: timeout
+waits till timeout time before throwing error where waiting for response is too long
+@Test(timeout=40000) time in milliseconds
+
+ -->
