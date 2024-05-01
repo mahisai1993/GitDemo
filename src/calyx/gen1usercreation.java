@@ -7,10 +7,9 @@ public class gen1usercreation {
 	@Test
 	public void usercreationmitechsuppor()
 	{
-		System.out.println("Gen1 user creation mitech support");
-		System.out.println("ssk chnaged line 1");
-		System.out.println("ssk chnaged line 2");
-		System.out.println("ssk chnaged line 3");
+		System.out.println("added in develop");
+		
+		
 	}
 	
 	@Test
@@ -28,9 +27,11 @@ public class gen1usercreation {
 	}
 	
 	@Test
-	public void usercreationsponsor()
+	public void usercreationmitech1suppor()
 	{
-		System.out.println("Gen1 user creation sponsor");
+		System.out.println("addedasdsa in develop");
+		
+		
 	}
 
 }
